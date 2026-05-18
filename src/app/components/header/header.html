@@ -1,0 +1,24 @@
+<header>
+        <button onclick="window.location.href='/'" class="index-btn">
+            <div class="nombre-empresa" id="nombre-empresa" >
+                <img src="./assets/iconos/water-drop-white.png" alt="white-drop">
+                <h1>Aqua Nova</h1>
+            </div>
+        </button>
+        <menu>
+            <button class="hamburger" onclick="toggleMenu($event.target)">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a routerLink="/"><img src="/assets/iconos/water-drop-white.png" alt="white-drop">Inicio</a></li>
+                <li><a routerLink="/ventas"><img src="/assets/iconos/partner-heart.png" alt="partner-heart">Ventas</a></li>
+                <li><a routerLink="/recursosHidricos"><img src="/assets/iconos/water-white.png" alt="water-icon">Recursos Hídricos</a></li>
+                <li><a routerLink="/amenazas"><img src="/assets/iconos/warning-white.png" alt="warning-white">Amenazas</a></li>
+                <li><a routerLink="./pages/clima.html"><img src="/assets/iconos/weather-white.png" alt="weather-white">Clima</a></li>
+                <li><a routerLink="./pages/tomaAccion.html"><img src="/assets/iconos/action-white.png" alt="action-white">Toma Acción</a></li>
+                <li><a routerLink="./pages/correcciones.html"><img src="/assets/iconos/corrections-white.png" alt="corrections-white">Correcciones</a></li>
+            </ul>
+        </menu>
+    </header>
