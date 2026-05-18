@@ -1,0 +1,37 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-font-size',
+  imports: [],
+  templateUrl: './font-size.html',
+  styleUrl: './font-size.css',
+})
+export class FontSize {
+  escucharBotones(){
+    const escuchar=document.querySelectorAll('button');
+    escuchar.forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        this.cambiarFuente(btn.id);
+      });
+    });
+
+  }
+  cambiarFuente(id:string) {
+    // Obtenemos el tamaño actual//
+    let fontSizeActual = window.getComputedStyle(document.body).fontSize;
+    
+    // Convertimos a número quitando el "px"//
+    let numeroActual = parseFloat(fontSizeActual);
+    console.log(numeroActual);
+
+    if (id === 'aumentar'&& numeroActual<20) {
+        document.body.style.fontSize = (numeroActual + 1) + "px";
+    } else if (id === 'disminuir') {
+        // Ponemos un límite mínimo para que no desaparezca la letra
+        if (numeroActual > 10) {
+            document.body.style.fontSize = (numeroActual - 1) + "px";
+        }
+      }
+  }
+
+}
