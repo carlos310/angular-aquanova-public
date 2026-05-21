@@ -7,6 +7,8 @@ import { FontSize } from './components/font-size/font-size';
 
 
 
+
+
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, Header, Footer,FontSize, RouterModule],
