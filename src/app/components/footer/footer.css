@@ -1,11 +1,16 @@
+section{
+  background-color: #1e40af;
+  bottom: 0;
+}
 footer {
-    background: #1e40af;
+    background-color: #1e40af;
     color: white;
     text-align: center;
     padding: 20px;
     display: flex;
     align-items: center;
     flex-direction: column;
+    height: 100%;
 }
 p{
     padding-top: 50px;

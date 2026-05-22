@@ -26,7 +26,7 @@ input{
     padding-left: 20px;
     overflow: hidden;
 }
-button{
+.buscar{
     display: flex;
     border-color: #1d4ed8;
     border-radius: 13px;

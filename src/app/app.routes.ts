@@ -9,6 +9,7 @@ import { SignInForm } from './pages/sign-in-form/sign-in-form';
 import { ProductosForm } from './pages/productos-form/productos-form';
 import { ProductosDeleteForm } from './pages/productos-delete-form/productos-delete-form';
 import { ProductosEditForm } from './pages/productos-edit-form/productos-edit-form';
+import { ProductosDashboard } from './pages/productos-dashboard/productos-dashboard';
 
 export const routes: Routes = [
     {path:'', component:Home},
@@ -21,6 +22,7 @@ export const routes: Routes = [
     {path:'ingresarProductos', component:ProductosForm},
     {path:'borrarProductos', component:ProductosDeleteForm},
     {path:'editarProductos', component:ProductosEditForm},
+    {path:'productosDashboard', component: ProductosDashboard},
     {path:'**', redirectTo:''}
 
 ];

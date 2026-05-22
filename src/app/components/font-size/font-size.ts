@@ -33,5 +33,8 @@ export class FontSize {
         }
       }
   }
+  cambiarAproductosDas(){
+    window.location.href='/productosDashboard';
+  }
 
 }
