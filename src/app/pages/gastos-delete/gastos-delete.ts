@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Gastos } from '../../gastos-form/gastos-form';
+import { Gastos } from '../../components/gastos-form/gastos-form';
 
 @Component({
   selector: 'app-gastos-delete',
