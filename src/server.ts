@@ -1,14 +1,14 @@
 import express from 'express';
 import { join } from 'node:path';
-import { CommonEngine } from '@angular/ssr';
 import { fileURLToPath } from 'node:url';
+import { CommonEngine } from '@angular/ssr';
 
 const app = express();
 
 // Carpeta donde está el build del navegador
 const browserDistFolder = join(fileURLToPath(import.meta.url), '../browser');
 
-// Instancia del motor SSR
+// Instancia del motor SSR con CommonEngine
 const angularApp = new CommonEngine();
 
 // Servir archivos estáticos desde /browser
@@ -28,11 +28,7 @@ app.get('*', async (req, res, next) => {
       documentFilePath: join(browserDistFolder, 'index.html'),
     });
 
-    if (response) {
-      res.status(200).send(response.html);
-    } else {
-      next();
-    }
+    res.status(200).send(response.html);
   } catch (error) {
     next(error);
   }

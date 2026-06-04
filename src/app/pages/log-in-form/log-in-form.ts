@@ -13,8 +13,8 @@ export class LogInForm {
   constructor(private userService:UserServices){
     if (typeof document !== 'undefined') {
 
-    const email= document.querySelector("#email")as HTMLInputElement;
-    const contrasena=document.querySelector("#contrasena")as HTMLInputElement;
+    const email= document.querySelector<HTMLInputElement>("#email");
+    const contrasena=document.querySelector<HTMLInputElement>("#contrasena");
     
     buttons?.addEventListener("click", async()=>{
       const emailValue=email?.value;
