@@ -1,0 +1,58 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Canaletas y bajantes",
+      "descripcion": "Artículo que permite la traslación del agua hacia un destino final",
+      "precioVenta": 600000,
+      "precioCompra": 400000,
+      "stock": 20,
+      "categoria": "Accesorios hidráulicos"
+    },
+    {
+      "id": 2,
+      "nombre": "Filtro de primera lluvia",
+      "descripcion": "Artículo que permite el tratamiento de agua de lluvia para que sea consumible",
+      "precioVenta": 800000,
+      "precioCompra": 500000,
+      "stock": 15,
+      "categoria": "Filtros"
+    },
+    {
+      "id": 3,
+      "nombre": "Tanque de almacenamiento",
+      "descripcion": "Permite guardar de forma segura el agua recolectada para su uso futuro",
+      "precioVenta": 2000000,
+      "precioCompra": 1500000,
+      "stock": 10,
+      "categoria": "Almacenamiento"
+    },
+    {
+      "id": 4,
+      "nombre": "Bomba de presión",
+      "descripcion": "Permite redistribuir y transportar el agua de manera más eficiente",
+      "precioVenta": 1200000,
+      "precioCompra": 900000,
+      "stock": 8,
+      "categoria": "Bombas"
+    },
+    {
+      "id": 5,
+      "nombre": "Sistema de tratamiento básico",
+      "descripcion": "Realiza el proceso de filtración y depuración de impurezas del agua recolectada",
+      "precioVenta": 1500000,
+      "precioCompra": 1100000,
+      "stock": 12,
+      "categoria": "Tratamiento"
+    },
+    {
+      "id": 6,
+      "nombre": "Kit de instalación y accesorios",
+      "descripcion": "Incluye todos los componentes necesarios para la instalación correcta del sistema",
+      "precioVenta": 900000,
+      "precioCompra": 600000,
+      "stock": 25,
+      "categoria": "Accesorios"
+    }
+  ]
+}

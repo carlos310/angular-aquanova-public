@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { get } from 'http';
 
 
 @Component({
@@ -22,5 +23,11 @@ export class UsersMainForm {
   ];
   get hiddenSignInFields():boolean{
     return this.signingHidden.includes(this.router.url);
+  };
+  private logInHidden: string[]=[
+    '/logIn'
+  ];
+  get hiddenLogInFields():boolean{
+    return this.logInHidden.includes(this.router.url);
   };
 }
