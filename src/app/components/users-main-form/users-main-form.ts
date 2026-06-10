@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 
@@ -23,4 +23,12 @@ export class UsersMainForm {
   get hiddenSignInFields():boolean{
     return this.signingHidden.includes(this.router.url);
   };
+  nombre: string = "";
+  email: string = "";
+  contrasena: string = "";
+  rol:string="";
+  @Output() datosListos = new EventEmitter<{email: string, contrasena: string}>();
+  async guardarDatos(){
+     this.datosListos.emit({email: this.email, contrasena: this.contrasena });
+  }
 }
