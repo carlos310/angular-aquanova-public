@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:aquanova": "node dist/aquanova/server/server.mjs"
+    "serve:ssr": "node dist/aquanova/server.mjs"
   },
   "private": true,
   "packageManager": "npm@11.12.1",
@@ -24,6 +24,7 @@
     "dotenv": "^17.4.2",
     "express": "^5.1.0",
     "joi": "^18.2.1",
+    "pg": "^8.21.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "typeorm": "^1.0.0"
