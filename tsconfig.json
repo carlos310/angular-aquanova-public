@@ -11,10 +11,12 @@
     "skipLibCheck": true,
     "isolatedModules": true,
     "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "importHelpers": true,
     "target": "ES2022",
     "allowImportingTsExtensions": true,
     "rewriteRelativeImportExtensions": true,
+    "allowSyntheticDefaultImports":true
     
   },
   "angularCompilerOptions": {
