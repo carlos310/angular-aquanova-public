@@ -1,6 +1,6 @@
 
-import { Ingreso } from "../domain/ingresos";
-import { IngresoPort } from "../domain/ingresosPort";
+import { Ingreso } from "../domain/ingresos.js";
+import { IngresoPort } from "../domain/ingresosPort.js";
 
 
 

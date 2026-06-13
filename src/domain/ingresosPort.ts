@@ -1,4 +1,4 @@
-import { Ingreso } from "./ingresos";
+import { Ingreso } from "./ingresos.js";
 
 //definición de métodos
 export interface IngresoPort{

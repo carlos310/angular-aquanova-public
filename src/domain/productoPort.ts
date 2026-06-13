@@ -1,4 +1,4 @@
-import { Producto } from "./producto";
+import { Producto } from "./producto.js";
 
 //definición de métodos
 export interface ProductoPort{

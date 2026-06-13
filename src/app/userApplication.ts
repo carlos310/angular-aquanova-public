@@ -1,6 +1,6 @@
 
-import { User } from "../domain/user";
-import { UserPort } from "../domain/userPort";
+import { User } from "../domain/user.js";
+import { UserPort } from "../domain/userPort.js";
 
 
 

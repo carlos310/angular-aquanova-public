@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IngresosMainForm } from './ingresos-main-form';
+import { IngresosMainForm } from './ingresos-main-form.js';
 
 describe('IngresosMainForm', () => {
   let component: IngresosMainForm;

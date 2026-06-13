@@ -31,7 +31,7 @@
               "allowedHosts": []
             },
             "ssr": {
-              "entry": "src/server.ts"
+              "entry": "src/main.server.ts"
             },
             "allowedCommonJsDependencies": ["expo-sqlite"],
             "externalDependencies": ["expo-sqlite"]

@@ -1,6 +1,6 @@
 
-import { Producto } from "../domain/producto";
-import { ProductoPort } from "../domain/productoPort";
+import { Producto } from "../domain/producto.js";
+import { ProductoPort } from "../domain/productoPort.js";
 
 
 

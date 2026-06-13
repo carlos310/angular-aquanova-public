@@ -1,4 +1,4 @@
-import { Costo } from "./costos";
+import { Costo } from "./costos.js";
 
 //definición de métodos
 export interface CostoPort{

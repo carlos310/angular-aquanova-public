@@ -13,7 +13,9 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "ES2022",
-    "module": "preserve",
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true,
+    
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
@@ -30,4 +32,6 @@
       "path": "./tsconfig.spec.json"
     }
   ]
+  
+
 }

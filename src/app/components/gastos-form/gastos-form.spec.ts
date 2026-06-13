@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Gastos } from './gastos-form';
+import { Gastos } from './gastos-form.js';
 
 describe('Gastos', () => {
   let component: Gastos;

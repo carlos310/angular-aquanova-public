@@ -4,14 +4,19 @@
     "outDir": "./out-tsc/app",
     "rootDir": "./src",
     "types": ["node"],
-    "paths": {}   // limpia los paths heredados
+    "paths": {},
+    "moduleResolution": "node",
+    "module": "es2022",
+    "target": "es2022"
+    
   },
   "include": [
     "src/**/*.ts",
     "src/index.ts"
-  ],
+, "server.ts"  ],
   "exclude": [
     "src/**/*.spec.ts",
+    "server.ts",
     "node_modules",
     "dist"
   ]

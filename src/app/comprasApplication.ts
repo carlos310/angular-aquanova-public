@@ -1,6 +1,6 @@
 
-import { Compra } from "../domain/compras";
-import { CompraPort } from "../domain/comprasPort";
+import { Compra } from "../domain/compras.js";
+import { CompraPort } from "../domain/comprasPort.js";
 
 
 

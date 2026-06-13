@@ -1,6 +1,6 @@
 
-import { Gasto } from "../domain/gastos";
-import { GastoPort } from "../domain/gastosPort";
+import { Gasto } from "../domain/gastos.js";
+import { GastoPort } from "../domain/gastosPort.js";
 
 
 

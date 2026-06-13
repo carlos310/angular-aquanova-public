@@ -1,4 +1,4 @@
-import { Gasto } from "./gastos";
+import { Gasto } from "./gastos.js";
 
 //definición de métodos
 export interface GastoPort{

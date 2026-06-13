@@ -1,6 +1,6 @@
 
-import { Costo } from "../domain/costos";
-import { CostoPort } from "../domain/costosPort";
+import { Costo } from "../domain/costos.js";
+import { CostoPort } from "../domain/costosPort.js";
 
 
 

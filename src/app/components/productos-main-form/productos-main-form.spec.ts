@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProductosMainForm } from './productos-main-form';
+import { ProductosMainForm } from './productos-main-form.js';
 
 describe('PorductosMainForm', () => {
   let component: ProductosMainForm;

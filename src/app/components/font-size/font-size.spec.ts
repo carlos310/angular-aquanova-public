@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FontSize } from './font-size';
+import { FontSize } from './font-size.js';
 
 describe('FontSize', () => {
   let component: FontSize;

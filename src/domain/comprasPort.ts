@@ -1,4 +1,4 @@
-import { Compra } from "./compras";
+import { Compra } from "./compras.js";
 
 //definición de métodos
 export interface CompraPort{

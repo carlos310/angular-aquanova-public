@@ -1,4 +1,4 @@
-import { User } from "./user";
+import { User } from "./user.js";
 
 //definición de métodos
 export interface UserPort{
