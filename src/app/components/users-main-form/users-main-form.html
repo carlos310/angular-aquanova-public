@@ -1,22 +1,38 @@
-<Section class="form">
+<form class="form">
     <section class="inputs">
+<<<<<<< HEAD
     @if(!hiddenLogInFields){
     <div>
         <label for="nombre">Nombre</label>
         <input  id="nombre" type="text" [(ngModel)]="nombre" placeholder="Ingrese el Nombre del producto">
+=======
+    @if (!hiddenSignInFields) {
+    <div>
+        <label for="nombre">Nombre</label>
+        <input [(ngModel)]="nombre" (ngModelChange)="emitirDatos()" name="nombre" id="nombre" type="text" placeholder="Ingrese el Nombre del producto">
+>>>>>>> 79dd6e94249c64e4c5b91fe8f7864da5db2ad181
     </div>
     }
     <div>
         <label for="email">Email</label>
+<<<<<<< HEAD
         <input  id="email" type="text"[(ngModel)]="email" placeholder="Ingrese la email">
     </div>
     <div>
         <label for="contraseña">Contraseña</label>
         <input  id="contrasena" type="text"[(ngModel)]="contrasena" placeholder="Ingrese la contraseña">
+=======
+        <input  [(ngModel)]="email"(ngModelChange)="emitirDatos()" name="email" id="email" type="text" placeholder="Ingrese la email">
+    </div>
+    <div>
+        <label for="contraseña">Contraseña</label>
+        <input  [(ngModel)]="contrasena"(ngModelChange)="emitirDatos()" name="contrasena" id="contraseña" type="text" placeholder="Ingrese la contraseña">
+>>>>>>> 79dd6e94249c64e4c5b91fe8f7864da5db2ad181
     </div>
     @if (!(rolHidden||hiddenSignInFields||hiddenLogInFields)){
     <div class="rol-div">
         <label for="rol">rol</label>
+<<<<<<< HEAD
         <input  id="rol" type="text" [(ngModel)]="rol" placeholder="Ingrese el rol">
     </div>
     }
@@ -25,4 +41,14 @@
     <button id="guardar" class="guardar" (click)="guardarDatos()" ><p>Guardar</p></button>
 
 </Section>
+=======
+        <input  [(ngModel)]="rol" (ngModelChange)="emitirDatos()" name="nombrol" id="rol" type="text" placeholder="Ingrese el rol">
+    </div>
+    }
+    </section>
+   @if (!hiddenSignInFields) {
+    <button class="guardar" ><p>Guardar</p></button>
+   }
+</form>
+>>>>>>> 79dd6e94249c64e4c5b91fe8f7864da5db2ad181
 

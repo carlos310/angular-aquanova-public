@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Component } from '@angular/core';
 import { UsersMainForm } from '../../components/users-main-form/users-main-form';
 import { UserServices } from '../../services/users-services';
@@ -5,9 +6,20 @@ import { UserDataService } from "../../services/user-data-service";
 @Component({
   selector: 'app-log-in-form',
   imports: [UsersMainForm],
+=======
+import { Component,  } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import {login, getMe} from "../../../../src/infrastructure/adapter/authService.js";
+import { UsersMainForm } from "../../components/users-main-form/users-main-form";
+@Component({
+  selector: 'app-log-in-form',
+  standalone: true,
+  imports: [UsersMainForm,CommonModule],
+>>>>>>> 79dd6e94249c64e4c5b91fe8f7864da5db2ad181
   templateUrl: './log-in-form.html',
-  styleUrl: './log-in-form.css',
+  styleUrls: ['./log-in-form.css'],
 })
+<<<<<<< HEAD
 
 export class LogInForm {
 
@@ -33,3 +45,28 @@ export class LogInForm {
   
 }
 
+=======
+export class LogInForm {
+  datosForm: { email: string; contrasena: string } | null = null;
+  mensajeError: string = '';
+
+  recibirDatos(datos: { email: string; contrasena: string }) {
+    this.datosForm = datos;
+  }
+
+  async handleLogin() {
+    if (!this.datosForm) return;
+    try {
+      await login(this.datosForm.email, this.datosForm.contrasena);
+      const user = await getMe();
+      console.log("Usuario autenticado:", user);
+      alert(`Usuario Logueado con exito, bienvenido ${user.name}`);
+    } catch (error) {
+      this.mensajeError = "Credenciales inválidas";
+    }
+  }
+}
+
+  
+
+>>>>>>> 79dd6e94249c64e4c5b91fe8f7864da5db2ad181

@@ -22,11 +22,26 @@
               "src/favicon.ico",
               "src/assets"
             ],
+<<<<<<< HEAD
             "styles": [
               "src/styles.css"
             ],
             "scripts": []
+=======
+            "styles": ["src/styles.css"],
+            "server": "src/main.server.ts",
+            "outputMode": "server",
+            "security": {
+              "allowedHosts": []
+            },
+            "ssr": {
+              "entry": "src/main.server.ts"
+            },
+            "allowedCommonJsDependencies": ["expo-sqlite"],
+            "externalDependencies": ["expo-sqlite"]
+>>>>>>> 79dd6e94249c64e4c5b91fe8f7864da5db2ad181
           },
+
           "configurations": {
             "production": {
               "budgets": [
