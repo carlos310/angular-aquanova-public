@@ -4,35 +4,35 @@
       "id": 1,
       "nombre": "Ana Torres",
       "email": "ana.torres@example.com",
-      "contraseña": "ana123",
+      "contrasena": "ana123",
       "rol": "admin"
     },
     {
       "id": 2,
       "nombre": "Luis Martínez",
       "email": "luis.martinez@example.com",
-      "contraseña": "luis456",
+      "contrasena": "luis456",
       "rol": "editor"
     },
     {
       "id": 3,
       "nombre": "Carolina Pérez",
       "email": "carolina.perez@example.com",
-      "contraseña": "caro789",
+      "contrasena": "caro789",
       "rol": "user"
     },
     {
       "id": 4,
       "nombre": "Jorge Ramírez",
       "email": "jorge.ramirez@example.com",
-      "contraseña": "jorge321",
+      "contrasena": "jorge321",
       "rol": "moderator"
     },
     {
       "id": 5,
       "nombre": "Valentina Gómez",
       "email": "valentina.gomez@example.com",
-      "contraseña": "vale654",
+      "contrasena": "vale654",
       "rol": "guest"
     }
   ]

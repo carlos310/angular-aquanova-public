@@ -1,44 +1,26 @@
+
+import { createNodeRequestHandler } from '@angular/ssr/node';
 import express from 'express';
 import { join } from 'node:path';
-import { fileURLToPath } from 'node:url';
-import { CommonEngine } from '@angular/ssr';
 
 const app = express();
+const PORT = process.env['PORT'] || 4000;
 
-// Carpeta donde está el build del navegador
-const browserDistFolder = join(fileURLToPath(import.meta.url), '../browser');
+// Carpeta de salida del build Angular
+const distFolder = join(process.cwd(), 'dist/aquanova/browser');
 
-// Instancia del motor SSR con CommonEngine
-const angularApp = new CommonEngine();
-
-// Servir archivos estáticos desde /browser
-app.use(
-  express.static(browserDistFolder, {
-    maxAge: '1y',
-    index: false,
-    redirect: false,
-  }),
-);
-
-// Manejar todas las demás peticiones renderizando Angular
-app.get('*', async (req, res, next) => {
-  try {
-    const response = await angularApp.render({
-      url: req.originalUrl,
-      documentFilePath: join(browserDistFolder, 'index.html'),
-    });
-
-    res.status(200).send(response.html);
-  } catch (error) {
-    next(error);
-  }
+// Ejemplo de endpoint REST propio
+app.get('/usuarios', (req, res) => {
+  const email = req.query['email'] as string;
+  res.json({ message: `Usuario con email ${email}` });
 });
 
-// Iniciar servidor
-const port = process.env['PORT'] || 4000;
-app.listen(port, (error?: Error) => {
-  if (error) {
-    throw error;
-  }
-  console.log(`Node Express server listening on http://localhost:${port}`);
+// Importa el módulo del servidor compilado
+const serverModule = require(join(process.cwd(), 'dist/aquanova/server/main.server.js'));
+
+// Middleware para servir Angular con SSR
+app.use('*', createNodeRequestHandler(serverModule));
+
+app.listen(PORT, () => {
+  console.log(`Servidor SSR corriendo en http://localhost:${PORT}`);
 });

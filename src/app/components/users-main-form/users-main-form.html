@@ -3,26 +3,26 @@
     @if(!hiddenLogInFields){
     <div>
         <label for="nombre">Nombre</label>
-        <input  id="nombre" type="text" placeholder="Ingrese el Nombre del producto">
+        <input  id="nombre" type="text" [(ngModel)]="nombre" placeholder="Ingrese el Nombre del producto">
     </div>
     }
     <div>
         <label for="email">Email</label>
-        <input  id="email" type="text" placeholder="Ingrese la email">
+        <input  id="email" type="text"[(ngModel)]="email" placeholder="Ingrese la email">
     </div>
     <div>
         <label for="contraseña">Contraseña</label>
-        <input  id="contrasena" type="text" placeholder="Ingrese la contraseña">
+        <input  id="contrasena" type="text"[(ngModel)]="contrasena" placeholder="Ingrese la contraseña">
     </div>
     @if (!(rolHidden||hiddenSignInFields||hiddenLogInFields)){
     <div class="rol-div">
         <label for="rol">rol</label>
-        <input  id="rol" type="text" placeholder="Ingrese el rol">
+        <input  id="rol" type="text" [(ngModel)]="rol" placeholder="Ingrese el rol">
     </div>
     }
     </section>
    
-    <button id="guardar" class="guardar" ><p>Guardar</p></button>
+    <button id="guardar" class="guardar" (click)="guardarDatos()" ><p>Guardar</p></button>
 
 </Section>
 

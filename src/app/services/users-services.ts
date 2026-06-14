@@ -1,4 +1,3 @@
-
 import { Injectable } from '@angular/core';
 import {UsersInterface} from '../interfaces/users-interface';
 @Injectable({
@@ -33,23 +32,20 @@ export class UserServices {
     const response= await fetch(`${this.url}/${id}`, {method:'PUT', headers:{'Content-Type':'application/json'}, body:JSON.stringify(user)}); 
     return await response.json();   
   }
-  async logInUser(email:string, contrasena:string){
+  async logInUser(email:string|undefined, contrasena:string|undefined){
     const userName= await fetch(`${this.url}?email=${email}`);
     const data:UsersInterface[]= await userName.json();
 
-    try {
+  
       const user=data[0];
       if(user.email=== email && user.contrasena ===contrasena){
         console.log(user);
         alert("Login exitoso");
       return user;
       }else{
-        throw new Error("Usuario y contrseña no hacen match");
+        return null;
       }
-    } catch (error) {
-      console.error(error);
-      
-    }
-    return null;
+  
+     
   }
 }

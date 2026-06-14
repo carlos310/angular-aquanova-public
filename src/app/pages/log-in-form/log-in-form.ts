@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { UsersMainForm } from '../../components/users-main-form/users-main-form';
 import { UserServices } from '../../services/users-services';
-const buttons=document.getElementById("guardar");
+import { UserDataService } from "../../services/user-data-service";
 @Component({
   selector: 'app-log-in-form',
   imports: [UsersMainForm],
@@ -10,20 +10,26 @@ const buttons=document.getElementById("guardar");
 })
 
 export class LogInForm {
-  constructor(private userService:UserServices){
-    if (typeof document !== 'undefined') {
 
-    const email= document.querySelector<HTMLInputElement>("#email");
-    const contrasena=document.querySelector<HTMLInputElement>("#contrasena");
-    
-    buttons?.addEventListener("click", async()=>{
-      const emailValue=email?.value;
-      const contrasenaValue=contrasena?.value;
-      this.userService.logInUser(emailValue, contrasenaValue);
-    });
+  constructor(private userService: UserServices,
+    private userData: UserDataService){};
+  async guardarUserLogged(datos:{email:string, contrasena:string}) {
+    const email= datos.email;
+    const contrasena= datos.contrasena;
+    try {
+      
+      const usuario = await this.userService.logInUser(email, contrasena);
+
+      if (usuario) {
+        alert("usuario logueado");
+      } else {
+        alert("revise su usuario y contraseña");
+      }
+    } catch (error) {
+      console.error("Error al iniciar sesión:", error);
     }
-    
-  };
+    console.log(`${email} and ${contrasena}`);
+  }
   
 }
 
