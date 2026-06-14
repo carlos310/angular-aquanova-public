@@ -3,7 +3,6 @@ import Joi from 'joi';
 const joi=Joi;
 export type ReturnUserData={
     name:string,
-    lastname:string,
     email:string;
     password:string;
     rol:string;

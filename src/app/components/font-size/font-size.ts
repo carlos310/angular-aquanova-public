@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
-
+import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-font-size',
-  imports: [],
+  standalone:true,
+  imports: [RouterModule],
   templateUrl: './font-size.html',
   styleUrl: './font-size.css',
 })
 export class FontSize {
+  constructor(private router: Router) {} 
   escucharBotones(){
     const escuchar=document.querySelectorAll('button');
     escuchar.forEach(btn=>{
@@ -33,8 +36,8 @@ export class FontSize {
         }
       }
   }
-  cambiarAproductosDas(){
-    window.location.href='/productosDashboard';
+  cambiarAproductosDas() {
+    this.router.navigate(['/productosDashboard']);
   }
 
 }

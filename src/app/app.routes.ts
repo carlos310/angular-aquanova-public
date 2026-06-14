@@ -22,6 +22,7 @@ import { GastosEdit } from './pages/gastos-edit/gastos-edit';
 import { IngresosCreate } from './pages/ingresos-create/ingresos-create';
 import { IngresosDelete } from './pages/ingresos-delete/ingresos-delete';
 import { IngresosEdit } from './pages/ingresos-edit/ingresos-edit';
+import { LogInForm } from './pages/log-in-form/log-in-form';
 
 export const routes: Routes = [
     {path:'', component:Home},
@@ -31,6 +32,7 @@ export const routes: Routes = [
     {path:'user-deletion-form', component:UserDeletionForm},
     {path:'user-edition-form', component:UserEditionForm},
     {path:'signIn', component:SignInForm},
+    {path:'login', component:LogInForm},
     {path:'ingresarProductos', component:ProductosForm},
     {path:'borrarProductos', component:ProductosDeleteForm},
     {path:'editarProductos', component:ProductosEditForm},

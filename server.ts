@@ -10,10 +10,16 @@ import ingresoRouter from "./src/infrastructure/routes/IngresosRoutes.js";
 import gastoRouter from "./src/infrastructure/routes/GastosRoutes.js";
 import costoRouter from "./src/infrastructure/routes/CostosRoutes.js";
 import compraRouter from "./src/infrastructure/routes/ComprasRoutes.js";
+import cors from "cors";
 
 dotenv.config();
-
+//middlewares
 const app = express();
+app.use(cors({
+  origin: "http://localhost:4200", // tu frontend Angular en dev
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

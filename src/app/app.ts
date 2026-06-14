@@ -4,7 +4,8 @@ import { Header } from './components/header/header';
 import { Footer } from './components/footer/footer';
 import { FontSize } from './components/font-size/font-size';
 import { Router } from '@angular/router';
-
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -12,7 +13,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Footer,FontSize, RouterModule],
+  imports: [RouterOutlet, Header, Footer,FontSize, RouterModule, FormsModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

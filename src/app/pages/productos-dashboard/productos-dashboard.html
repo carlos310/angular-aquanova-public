@@ -1,6 +1,6 @@
 <section>
-  <button onclick="window.location.href='/productosDashboard'" class="regresar-inicio">💧</button>
-  
+  <button onclick="window.location.href = '/productosDashboard'" class="regresar-inicio">💧</button>
+
   <table>
     <thead>
       <tr>
@@ -13,22 +13,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-      </tr>
-      <tr>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-      </tr>
+      @for (producto of productos; track producto.id) {
+        <tr>
+          <td>{{ producto.name }}</td>
+          <td>{{ producto.description }}</td>
+          <td>{{ producto.sellValue }}</td>
+          <td>{{ producto.buyValue }}</td>
+          <td>{{ producto.stock }}</td>
+          <td>{{ producto.category }}</td>
+        </tr>
+      }
     </tbody>
   </table>
 </section>

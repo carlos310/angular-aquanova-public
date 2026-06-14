@@ -16,7 +16,7 @@ export const AppDataSource= new DataSource({
     password:envs.DB_PASSWORD,
     database:envs.DB_NAME,
     schema:"aqua_nova",
-    synchronize: true, //no se usa en prod 
+    synchronize: false, //no se usa en prod 
     logging:true,
     entities:[User, Producto, Ingresos,Gastos,Costos,Compras]
 });

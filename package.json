@@ -11,7 +11,10 @@
     "serve:ssr": "node dist/aquanova/server.mjs",
     "start:backend": "ts-node --esm src/server.ts",
     "dev:backend": "nodemon --watch src --ext ts --exec ts-node --esm src/server.ts",
-    "dev": "concurrently \"npm run dev:backend\" \"npm run serve:ssr\""
+    "dev": "concurrently \"npm run dev:backend\" \"npm run serve:ssr\"",
+    "typeorm": "typeorm-ts-node-esm",
+    "migration:generate": "npm run typeorm migration:generate -- -d src/data-source.ts",
+    "migration:run": "npm run typeorm migration:run -- -d src/data-source.ts"
   },
   "private": true,
   "dependencies": {
@@ -24,28 +27,34 @@
     "@angular/router": "21.2.15",
     "@angular/ssr": "21.2.15",
     "@vitejs/plugin-basic-ssl": "^2.3.0",
+    "bcryptjs": "^3.0.3",
     "better-sqlite3": "^12.10.0",
+    "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "esbuild": "^0.28.1",
     "express": "^5.1.0",
     "joi": "^18.2.1",
+    "jsonwebtoken": "^9.0.3",
     "pg": "^8.21.0",
     "rxjs": "7.8.2",
     "tslib": "^2.6.2",
-    "typeorm": "^1.0.0",
     "vite": "^8.0.16"
   },
   "devDependencies": {
     "@angular/build": "21.2.15",
     "@angular/cli": "21.2.15",
     "@angular/compiler-cli": "21.2.15",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.1",
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^20.17.19",
     "concurrently": "^10.0.3",
     "jsdom": "^28.0.0",
     "nodemon": "^3.1.14",
     "prettier": "^3.8.1",
     "ts-node": "^10.9.2",
+    "typeorm": "^1.0.0",
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"
   }
